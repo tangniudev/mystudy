@@ -11,6 +11,7 @@ import java.util.concurrent.locks.LockSupport;
  * @author tyw
  * @since 2022/6/20
  * 打断 sleep 的线程, 会清空打断状态，以 sleep 为例
+ * 打断正常运行的线程, 不会清空打断状态
  * 打断 park 线程, 不会清空打断状态
  */
 @Slf4j
@@ -28,6 +29,7 @@ public class InterruptDemo {
             }
         }, "t1");
         t1.start();
+        t1.getState();
         TimeUnit.SECONDS.sleep(1);
         t1.interrupt();
         log.debug(" 打断状态: {}", t1.isInterrupted());
