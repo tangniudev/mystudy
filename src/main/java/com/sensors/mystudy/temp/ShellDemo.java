@@ -1,4 +1,4 @@
-package com.sensors.mystudy;
+package com.sensors.mystudy.temp;
 
 public class ShellDemo {
     public static void main(String[] args) {

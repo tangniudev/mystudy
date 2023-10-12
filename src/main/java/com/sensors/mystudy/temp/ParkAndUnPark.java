@@ -1,4 +1,4 @@
-package com.sensors.mystudy;
+package com.sensors.mystudy.temp;
 
 import lombok.extern.slf4j.Slf4j;
 
